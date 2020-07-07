@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id([:user_id])
-    @hours = Hour.all
+    @user_hours = current_user.hours.all
   end
 
   private
