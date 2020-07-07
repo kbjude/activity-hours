@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
-    before_action :login_required
+    # before_action :login_required
 
     def login_required
         unless logged_in?
