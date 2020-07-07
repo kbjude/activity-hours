@@ -1,6 +1,6 @@
 <h1> User Profile </h1>
 
 <% @user_hours.each do |uh| %>
-    <%= link_to uh.hours, @hour %>hrs
-    <%= link_to uh.description, @hour %>
+    <%= link_to uh.hours, hour_path(uh) %>hrs
+    <%= link_to uh.description, hour_path(uh)%>
 <% end %>
