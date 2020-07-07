@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :login_required, only: %i[new create]
     def index
         @users = User.all
     end
@@ -8,18 +9,19 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.create(params)
+        @user = User.new(user_params)
+        @user.save
+        if @user.save
+            flash.now[:succes] = 'User has been successfully added'
+            redirect_to @user
+        else
+            render :new
+        end
     end
 
     def show
         @user = User.find_by_id([:user_id])
     end
-
-    # def destroy
-    # end
-
-    # def update
-    # end
 
     private
     def user_params
