@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if @user
       session[:user_id] = @user.id
       redirect_to root_path
-    elsif flash[:alert] == 'Invalid name'
+    elsif flash[:alert] = 'Invalid name or username'
       @user = User.new(params)
       redirect_to root_path
     else
