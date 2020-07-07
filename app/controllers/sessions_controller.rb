@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by_name(params[:name])
     if @user
-      session[:user_id] = @user.user_id
+      session[:user_id] = @user.id
       redirect_to root_path
     elsif flash[:alert] == 'Invalid name'
       @user = User.new(params)
