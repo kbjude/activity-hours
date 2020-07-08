@@ -6,6 +6,8 @@ class Hour < ApplicationRecord
   belongs_to :user, dependent: :destroy
 end
 
-def totalhours
+public
+
+def totalhours(user)
   Hour.sum(:hours)
 end

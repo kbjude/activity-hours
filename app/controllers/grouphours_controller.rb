@@ -4,11 +4,11 @@ class GrouphoursController < ApplicationController
       end
     
       def new
-        @grouphour = Grouphour.new
+        @grouphour = current_user.grouphour.build
       end
     
       def create
-        @grouphour = Grouphour.new(grouphour_params)
+        @grouphour = current_user.grouphour.build(grouphour_params)
         @grouphour.save
         if @grouphour.save
           flash.now[:succes] = 'Hour successful created'
