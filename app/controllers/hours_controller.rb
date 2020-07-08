@@ -22,6 +22,7 @@ class HoursController < ApplicationController
   def show
     @hour = Hour.find_by_id([:hour_id])
     @users = User.all
+    @groups = Group.all
   end
 
   private

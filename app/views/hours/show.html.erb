@@ -1,5 +1,10 @@
 <h1> <%= totalhours %> </h1>
 
+<ul>
 <% @hours.each do |hour| %>
-    <%= hour.description %>
+    <li> <%= hour.description %> </li>
+    <li> <%= hour.hours %> </li>
+    <li> <%= hour.group.icon %> </li>
 <% end %>
+</ul>
+
