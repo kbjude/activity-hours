@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     @user = User.find_by_id([:user_id])
     @user_hours = current_user.hours.all
     @user_groups = current_user.groups.all
+    @user_grouphours = current_user.hours.grouphours.all
   end
 
   private
