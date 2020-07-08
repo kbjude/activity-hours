@@ -1,7 +1,7 @@
 <h1> All Groups </h1>
 
 <% @groups.each do |group| %>
-    <%= group.name %> &nbsp |
+    <%= link_to group.name, group_path(group) %> &nbsp |
     <%= group.icon %> &nbsp |
     <%= group.created_at %> &nbsp |
 <% end %>
