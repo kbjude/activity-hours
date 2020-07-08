@@ -1,5 +1,5 @@
-<h1> <%= @hour.description %> </h1>
+<h1> <%= totalhours %> </h1>
 
-
-<p> Hours Spent: <%= @hour.hours %> </p>
-<p> Authour: <%= @hour.user_id %> </p>
+<% @hours.each do |hour| %>
+    <%= hour.description %>
+<% end %>

@@ -1,6 +1,7 @@
 class HoursController < ApplicationController
+  before_action :login_required, only: %i[new create]
   def index
-    @hours = Hours.all
+    @hours = Hours.all.order(created_at: :desc)
   end
 
   def new
@@ -8,7 +9,7 @@ class HoursController < ApplicationController
   end
 
   def create
-    @hour = Hour.new(hour_params)
+    @hour = current_user.hours.build(hour_params)
     @hour.save
     if @hour.save
       flash.now[:succes] = 'Hour successful created'
@@ -20,6 +21,7 @@ class HoursController < ApplicationController
 
   def show
     @hour = Hour.find_by_id([:hour_id])
+    @users = User.all
   end
 
   private

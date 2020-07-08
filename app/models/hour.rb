@@ -7,8 +7,5 @@ class Hour < ApplicationRecord
 end
 
 def totalhours
-  hours = Hour.hours
-  hours.each do |hour|
-    hour + = hour
-  end 
+  Hour.sum(:hours)
 end
