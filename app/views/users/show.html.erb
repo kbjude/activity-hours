@@ -10,7 +10,7 @@
 
 <h3> All my external hours </h3>
 
-<h3> All Groups</h3>
+<h3> <%= link_to 'All Groups', groups_path %> </h3>
     <% @user_groups.each do |group| %>
         <%= link_to group.name, group_path(group) %>
     <% end %>
