@@ -4,11 +4,11 @@ class GroupsController < ApplicationController
       end
     
       def new
-        @group = Group.new
+        @group = current_user.groups.build
       end
     
       def create
-        @group = Group.new(hour_params)
+        @group = current_user.groups.build(hour_params)
         @group.save
         if @group.save
           flash.now[:succes] = 'Group successful created'
