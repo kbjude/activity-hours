@@ -12,5 +12,5 @@
 
 <h3> All Groups</h3>
     <% @user_groups.each do |group| %>
-        <%= group.name %>
+        <%= link_to group.name, group_path(group) %>
     <% end %>
