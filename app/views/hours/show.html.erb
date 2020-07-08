@@ -5,6 +5,8 @@
     <li> <%= hour.description %> </li>
     <li> <%= hour.hours %> </li>
     <li> <%= hour.group.icon %> </li>
+    <li> <%= hour.created_at %> </li>
 <% end %>
 </ul>
 
+<%= link_to 'Add new', new_hour_path %>
