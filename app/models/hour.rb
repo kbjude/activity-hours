@@ -5,3 +5,10 @@ class Hour < ApplicationRecord
   has_many :groups, through: :grouphours, source: :group
   belongs_to :user, dependent: :destroy
 end
+
+def totalhours
+  hours = Hour.hours
+  hours.each do |hour|
+    hour + = hour
+  end 
+end
