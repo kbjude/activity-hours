@@ -1,5 +1,6 @@
 class HoursController < ApplicationController
   before_action :login_required, only: %i[new create]
+  
   def index
     @hours = Hours.all.order(created_at: :desc)
   end
