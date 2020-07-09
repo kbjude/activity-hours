@@ -1,10 +1,9 @@
-<%= form_for @group do |form|%>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-    <%= form.label :user %>
-    <%= collection_select(:user, :user_id, User.all, :id, :name) %>
-    <%= form.button class: 'btn' do %>
+<%= form_for @group do |form|%> <br> <br>
+    <%= form.label :name %> <br>
+    <%= form.text_field :name %> <br> <br>
+    <%= form.label :user %><br>
+    <%= collection_select(:user, :user_id, User.all, :id, :name) %> <br> <br>
+    <%= form.button class: 'btn' do %><br>
         Create My Account <i class="fa"> </i>
       <% end %>
-    <%= form.submit :Save %>
 <% end %>
