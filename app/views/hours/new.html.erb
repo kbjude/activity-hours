@@ -1,8 +1,8 @@
 
-<% form_for @hour do |form|%>
-    <%= form.label :hours %>
-    <%= form.text_field :hours %>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-    <%= form.submit :save%>
+<%= form_for @hour do |form|%><br><br>
+    <%= form.label :hours %> <br>
+    <%= form.text_field :hours %><br><br>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %><br><br>
+    <%= form.submit :save %><br><br>
 <% end %>
