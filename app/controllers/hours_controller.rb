@@ -31,9 +31,7 @@ class HoursController < ApplicationController
   def externalhours
     @hours = []
     current_user.hours.each do |hour|
-      if hour.groups.count == 0
-        @hours.push hour
-      end
+      @hours.push hour if hour.groups.count.zero?
     end
   end
 
