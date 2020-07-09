@@ -1,6 +1,8 @@
 <%= form_for @group do |form|%> <br> <br>
     <%= form.label :name %> <br>
     <%= form.text_field :name %> <br> <br>
+    <%= form.label :icon %> <br>
+    <%= form.text_field :icon %> <br> <br>
     <%= form.label :user %><br>
     <%= collection_select(:user, :user_id, User.all, :id, :name) %> <br> <br>
     <%= form.button class: 'btn' do %><br>

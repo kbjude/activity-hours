@@ -1,1 +1,4 @@
 <h1> <%= Group.name %> </h1>
+    <% @grouphours.each do |hour|%>
+        <%= hour.hours %>
+    <% end %>

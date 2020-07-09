@@ -2,7 +2,9 @@
 
 <% @groups.each do |group| %>
     <%= link_to group.name, group_path(group) %> &nbsp |
-    <%= group.icon %> &nbsp |
+    <% if group.icon %>
+        <%= image_tag(group.icon) %> &nbsp |
+    <% end %>
     <%= group.created_at %> &nbsp |
 <% end %>
 
