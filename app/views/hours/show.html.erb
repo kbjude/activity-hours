@@ -1,7 +1,7 @@
 <h1> <%= @count %> </h1>
 
 <ul>
-<% Hour.all.each do |hour| %>
+<% Hours.all.each do |hour| %>
     <li> <%= hour.description %> </li>
     <li> <%= hour.hours %> </li>
     <li> <%= hour.created_at %> </li>

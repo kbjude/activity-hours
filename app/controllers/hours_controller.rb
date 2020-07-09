@@ -28,6 +28,15 @@ class HoursController < ApplicationController
     @count = Hour.totalhours(@user)
   end
 
+  def externalhours
+    @hours = []
+    current_user.hours.each do |hour|
+      if hour.groups.count == 0
+        @hours.push hour
+      end
+    end
+  end
+
   private
 
   def hour_params
