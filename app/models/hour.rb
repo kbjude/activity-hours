@@ -8,6 +8,6 @@ end
 
 public
 
-def totalhours(user)
+def totalhours(_user)
   Hour.sum(:hours)
 end
