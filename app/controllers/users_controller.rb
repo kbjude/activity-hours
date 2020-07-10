@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user.save
     if @user.save
       flash.now[:succes] = 'User has been successfully added'
-      redirect_to @user
+      redirect_to root_path
     else
       render :new
     end
