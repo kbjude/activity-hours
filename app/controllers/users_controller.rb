@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user.save
     if @user.save
       flash.now[:succes] = 'User has been successfully added'
+      session[:user_id] = @user.id
       redirect_to root_path
     else
       render :new
@@ -23,7 +24,6 @@ class UsersController < ApplicationController
     @user = User.find_by_id([:user_id])
     @user_hours = current_user.hours.all
     @user_groups = current_user.groups.all
-    # @user_grouphours = current_user.hours.grouphours
   end
 
   private
