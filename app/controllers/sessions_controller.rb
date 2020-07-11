@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_name(params[:name])
     if User.exists?(@user.id)
       session[:user_id] = @user.id
-      redirect_to root_path 
+      redirect_to root_path
     elsif @user != User.any?(:name)
       @new_user = User.new(params)
       @new_user.save
