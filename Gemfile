@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use ActiveStorage variant
   gem 'mini_magick', '~> 4.8'
+  gem "google-cloud-storage", "~> 1.11", require: false
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
