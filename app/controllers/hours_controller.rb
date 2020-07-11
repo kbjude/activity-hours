@@ -14,7 +14,7 @@ class HoursController < ApplicationController
     @hour.save
     if @hour.save
       flash.now[:succes] = 'Hour successful created'
-      redirect_to hour_path
+      redirect_to @hour
     else
       render :new
     end
