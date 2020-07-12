@@ -10,32 +10,39 @@ body {
     }
 
     a:hover {
-        color: rgb(243, 240, 240);
+        color: rgb(214, 209, 209);
     }
 
     .circle {
         border-color: ivory;
         border-style: solid;
-        border-width: 1px;
+        border-width: 2px;
         border-radius: 23px;
-        padding: 5px;
-        width: 15px;
-    }
-
-    .motherdiv2 {
-        display: flex;
-    }
-
-    .circle {
+        padding: 13px;
+        width: 17px;
         margin-top: 15px;
     }
 
-    .mother-lists2 {
-        margin-left: 20px;
+    .motherdiv2 .motherdiv3 {
+        display: flex;
     }
 
+    // .circle {
+    //     margin-top: 15px;
+    // }
+
+    // .mother-lists2 {
+    //     margin-left: 50px;
+    //     margin-top: -60;
+    //     border: solid;
+    // }
+
     .list-content {
-        border: solid;
+
         align-items: left;
+    }
+
+    .awesome-icon {
+        margin-left: 1px;
     }
 }

@@ -21,29 +21,27 @@
         <div>
     </div>
     <div class="motherdiv2">
-        <div class="list-icons2">
-            <div class="circle">
-                <i class="fa fa-cog" aria-hidden="true"></i></i>
-            </div>
+        <div class="circle">
+            <i class="fa fa-cog awesome-icon" aria-hidden="true"></i>
         </div>
         <div class="mother-lists2">
             <h4> <%= link_to 'All my external hours', externalhours_hours_path %> </h4>
         <hr>
     </div>
     <div class="motherdiv3">
-        <div class="list-icons3">
+        <div class="circle">
+            <i class="fa fa-cog awesome-icon" aria-hidden="true"></i>
         </div>
-        <div class="list-names"
+        <div class="list-names">
             <div class="list-subtitle">
                 <h4> <%= link_to 'All Groups', groups_path %> </h4>
-                <hr>
-            </div>
-            <div class="list-content">
-                <ul>
-                    <% @user_groups.each do |group| %>
-                        <li> <%= link_to group.name, group_path(group) %> </li>
-                    <% end %>
-                <ul>
+                <div class="list-content">
+                    <ul>
+                        <% @user_groups.each do |group| %>
+                            <li> <%= link_to group.name, group_path(group) %> </li>
+                        <% end %>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
