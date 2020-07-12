@@ -2,24 +2,46 @@
     <h1> User Profile </h1>
 </div>
 <div class="profile-body">
-    <div class="list-icons">
+    <div class="motherdiv1">
+        <div class="list-icons">
+        </div>
+        <div class="list-names">
+            <div class="subtitle">
+                <h4> All my hours</h4>
+                <hr>
+            </div>
+            <div class="content">
+                <ul>
+                    <% @user_hours.each do |uh| %>
+                        <li> <%= link_to uh.hours, hour_path(uh) %> &nbsp hrs
+                        <%= link_to uh.description, hour_path(uh)%> </li>
+                    <% end %>
+                </ul>
+            </div>
+        <div>
     </div>
-    <div class="list-names">
-        <h4> All my hours</h3>
-        <ul>
-            <% @user_hours.each do |uh| %>
-                <li> <%= link_to uh.hours, hour_path(uh) %> &nbsp hrs
-                <%= link_to uh.description, hour_path(uh)%> </li>
-            <% end %>
-        </ul>
-    <div>
-
-    <p> 
-        <h4> <%= link_to 'All my external hours', externalhours_hours_path %> </h3>
-    </p>
-
-    <h4> <%= link_to 'All Groups', groups_path %> </h3>
-        <% @user_groups.each do |group| %>
-            <%= link_to group.name, group_path(group) %>
-        <% end %>
+    <div class="motherdiv2">
+        <div class="list-icons2">
+        </div>
+        <div class="mother-lists2">
+        <h4> <%= link_to 'All my external hours', externalhours_hours_path %> </h4>
+        <hr>
+    </div>
+    <div class="motherdiv3">
+        <div class="list-icons3">
+        </div>
+        <div class="list-names"
+            <div class="list-subtitle">
+                <h4> <%= link_to 'All Groups', groups_path %> </h4>
+                <hr>
+            </div>
+            <div class="list-content">
+                <ul>
+                    <% @user_groups.each do |group| %>
+                        <li> <%= link_to group.name, group_path(group) %> </li>
+                    <% end %>
+                <ul>
+            </div>
+        </div>
+    </div>
 </div>
