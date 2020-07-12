@@ -1,18 +1,25 @@
-<h1> User Profile </h1>
+<div class="profile-title">
+    <h1> User Profile </h1>
+</div>
+<div class="profile-body">
+    <div class="list-icons">
+    </div>
+    <div class="list-names">
+        <h4> All my hours</h3>
+        <ul>
+            <% @user_hours.each do |uh| %>
+                <li> <%= link_to uh.hours, hour_path(uh) %> &nbsp hrs
+                <%= link_to uh.description, hour_path(uh)%> </li>
+            <% end %>
+        </ul>
+    <div>
 
-<h3> All my hours</h3>
-<p>
-<% @user_hours.each do |uh| %>
-    <%= link_to uh.hours, hour_path(uh) %>hrs
-    <%= link_to uh.description, hour_path(uh)%>
-<% end %>
-</p>
+    <p> 
+        <h4> <%= link_to 'All my external hours', externalhours_hours_path %> </h3>
+    </p>
 
-<p> 
-    <h3> <%= link_to 'All my external hours', externalhours_hours_path %> </h3>
-</p>
-
-<h3> <%= link_to 'All Groups', groups_path %> </h3>
-    <% @user_groups.each do |group| %>
-        <%= link_to group.name, group_path(group) %>
-    <% end %>
+    <h4> <%= link_to 'All Groups', groups_path %> </h3>
+        <% @user_groups.each do |group| %>
+            <%= link_to group.name, group_path(group) %>
+        <% end %>
+</div>
