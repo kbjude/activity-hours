@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome";
 body {
     margin: 0 40px;
     background-image: linear-gradient(#1C4979, #2F7DB8,#14335F);
