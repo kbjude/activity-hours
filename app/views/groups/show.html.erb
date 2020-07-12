@@ -1,16 +1,19 @@
-<h1> <%= @group.name %> </h1>
-<br>
-<% if @group.icon.attached? %>
+<div class="group-title">
+    <h1> <%= @group.name %> </h1>
+</div
+<div class ="profile-items">
+    <% if @group.icon.attached? %>
     <%= image_tag(@group.icon.variant(resize: '200x200>')) %>
-<% end %>
+    <% end %>
 
     <% @grouphours.each do |hour|%>
         <%= hour.hours %>
     <% end %>
-<p>
+    <p>
     Created at:    <%= @group.created_at %>
-</p>
+    </p>
 
-<p>
+    <p>
     Authoured by:    <%= @user.name %>
-</p>
+    </p>
+<div>
