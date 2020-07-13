@@ -22,7 +22,9 @@ body {
     background-color: #f8f8f8;
 }
 
-// .descriptionh, .time {
+.time {
+    font-size: 13px;
+}
 
 
 .single-item {
@@ -36,4 +38,17 @@ body {
     color: black;
 }
 
+.button {
+    background-color: #5FB625;
+    height: 180px;
+    padding: 90px;
+}
 
+.layout {
+    width: 80%;
+    height: 50%;
+    border: solid;
+    padding: 30px;
+    text-align: center;
+    font-size: 45px;
+}
