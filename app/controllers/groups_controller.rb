@@ -23,6 +23,7 @@ class GroupsController < ApplicationController
     @hours = Hour.all
     @grouphours = @group.hours
     @user = User.find_by_id(params[:id])
+    @groups = Group.all.order(:name)
   end
 
   private
