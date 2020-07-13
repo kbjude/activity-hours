@@ -9,20 +9,29 @@
     <div class="image"> Most Recent </div>
     <div class="image"> Most Acient</i></div>
 </div>
-<div class="count"> 
-    <div class="description">
-    Total hours
+<div class="contenth">
+    <div class="count"> 
+        <div class="totalhours">
+        Total hours
+        </div>
+        <div class="number"> <%= @count %> hrs </div>
     </div>
-    <div class="number"> <%= @count %> hrs </div>
-</div>
-<div class="content">
-    <ul>
-    <% @hours.each do |hour| %>
-        <li> <%= hour.description %> </li>
-        <li> <%= hour.hours %> </li>
-        <li> <%= hour.created_at %> </li>
-    <% end %>
-    </ul>
-</div>
+    <div class="single-item">
+        <% @hours.each do |hour| %>
+            <div class="descriptionh">
+                <%= hour.description %>
+            </div>
+            <div class="descriptionh">
+                <%= hour.hours %>
+            </div>
+    </div>
+    <div class="time">
+                <%= hour.created_at %>
+            <% end %>
+    </div>
 
-<%= link_to 'Add new', new_hour_path %>
+    <br><br>
+    <div class="button">
+    <%= link_to 'Add new', new_hour_path %>
+    </div>
+</div>
