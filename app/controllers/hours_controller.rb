@@ -30,10 +30,12 @@ class HoursController < ApplicationController
   end
 
   def externalhours
+    @user = User.find_by_id(params[:id])
     @hours = []
     current_user.hours.each do |hour|
       @hours.push hour if hour.groups.count.zero?
-    end
+    end 
+    @total_hours = @hours.totalhours(@user)
   end
 
   private
