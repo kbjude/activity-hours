@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-    .header-hours {
+    .header-hours, .header-hou {
         display: flex;
         justify-content: space-between;
+        font-size: 22px;
     }
 }
 
