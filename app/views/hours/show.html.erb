@@ -16,7 +16,8 @@
         </div>
         <div class="number"> <%= @count %> hrs </div>
     </div>
-    <div class="single-item">
+    <div class="singleitemblock">
+        <div class="single-item">
         <% @hours.each do |hour| %>
             <div class="descriptionh">
                 <%= hour.description %>
@@ -24,10 +25,11 @@
             <div class="descriptionh">
                 <%= hour.hours %>
             </div>
-    </div>
-    <div class="time">
-                <%= hour.created_at %>
-            <% end %>
+        </div>
+        <div class="time">
+                    <p><%= hour.created_at %> </p>
+                <% end %>
+        </div><br>
     </div>
 
     <br><br>
