@@ -1,5 +1,11 @@
 <h1> User external hours </h1>
-
-<% @hours.each do |hour|%>
-    <%= hour.hours %>
-<% end %>
+<div class="externalhrs">
+    <ul>
+        <% @hours.each do |hour|%>
+            <li> 
+            <%= hour.hours %>hrs | Created At: 
+            <%= hour.created_at %>
+            </li>
+        <% end %>
+    </ul>
+</div>
