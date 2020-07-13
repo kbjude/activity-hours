@@ -11,14 +11,8 @@
     <div class="image"> Most Acient</i></div>
 </div>
 <div class="contenth">
-    <div class="count"> 
-        <div class="totalhours">
-        Total hours
-        </div>
-        <div class="number"> <%= @totalhours %> hrs </div>
-    </div>
     <div class="externalhrs">
-        <% @hours.each do |hour|%>
+        <% @sorted.each do |hour|%>
         <div class="single-item">
             <div class="descriptionh">
                 <%= hour.description %>
