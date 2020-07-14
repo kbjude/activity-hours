@@ -14,10 +14,12 @@
 <% @groups.each do |group|%>
     <div class="single-item">
         <div class="descriptionh">
-        <%= link_to group.name, group_path(group) %>
+            <%= link_to group.name, group_path(group) %>
+        </div>
+        <div class="description">
         </div>
         <div class="descriptionh">
-        <%= group.created_at %> &nbsp
+            <%= group.created_at %> &nbsp
         </div>
     </div>
 <% end %> </p>
