@@ -6,5 +6,9 @@ RSpec.describe 'User', type: :model do
             user = User.create(name: 'Jude')
             expect(user).to eql(user)
         end
+        it 'returns a verified user' do
+            user = User.create(name: '')
+            expect(user.valid?).to eql(false)
+        end
     end
 end
