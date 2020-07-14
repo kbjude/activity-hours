@@ -32,6 +32,10 @@
                 <% end %>
     </div>
 
+    <% if @hour.uploads.attached? %>
+        <%= image_tag(resize.uploads.variant('400 x 400'))%>
+    <% end %>
+
     <br><br>
     <div class="button">
         <div class="layout">

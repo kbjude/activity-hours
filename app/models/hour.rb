@@ -1,4 +1,5 @@
 class Hour < ApplicationRecord
+  has_many_attached:uploads
   validates :hours, presence: true, numericality: { only_integer: true }
 
   has_many :grouphours, dependent: :destroy

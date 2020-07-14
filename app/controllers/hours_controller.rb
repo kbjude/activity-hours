@@ -40,6 +40,6 @@ class HoursController < ApplicationController
   private
 
   def hour_params
-    params.require(:hour).permit(:hours, :description, :user_id)
+    params.require(:hour).permit(:hours, :description, :user_id, uploads: [])
   end
 end
