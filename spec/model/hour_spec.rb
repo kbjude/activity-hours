@@ -7,7 +7,7 @@ RSpec.describe 'Hour', type: :model do
             hour = Hour.create(hours: 2, description: "Praying", user_id: 1)
             expect(Hour.first.description).to eql("Praying")
         end
-        it 'returns a newly created user hour' do
+        it 'returns all the registered hours' do
             hour = Hour.all
             expect(hour).to eql(hour)
         end
