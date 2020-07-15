@@ -46,7 +46,8 @@ Some of the features of this project include but not limited to:
     - The tests can be run using the rspec command.
 
 ###Technologies Used
-- Rails for Ruby
+- Ruby
+- Ruby on rails
 
 ### Contributors
 Jude Kajura
