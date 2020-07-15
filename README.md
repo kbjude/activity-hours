@@ -1,24 +1,45 @@
-# README
+## Group Hours
+This is a Solo project where a user should be able to create a Group-hours page which allows users to create accounts, groups, hours, along with session creation and destruction. At the end of the project, the user should view all groups, hours by groups and hours by user, all in All these activities start on the index page.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Requirements
+Download the application and ensure that you have Ruby installed.
+Install rails 5.2.3 if you haven't yet done it.
+To Intsall rails add the gem install rails -v '5.2.3' command.
 
-Things you may want to cover:
+### Features
+Some of the features of this project include:
+  - User Signup. 
+  - User Login.
+  - List of Groups.
+  - List Users.
 
-* Ruby version
+### User authentication and Authorisation using session id
+  - Users are created using the signup feature.
+  - They get to signin.
+  - Every action is dependent on a logged user apart from the index page.
+  
+ ### Installing
 
-* System dependencies
+### Using the System
+  - Run rails s to start the server.
+  - Type localhost:3000 in the URL.
+  - Create an account and signin with that account.
+  - The rest, follow the UI for what you want to do.
+  
+## TESTING
+  - Tests written for: 
+      - Groups.
+      - Hours.
+      - Users.
+      
+  - Running the Tests:
+  The tests are written using Rspec and because of that:
+    - The tests can be run using the rspec command.
 
-* Configuration
+Technologies Used
+Rails for Ruby
 
-* Database creation
+### Contributors
+Jude Kajura
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+GitHub: @kbjude
