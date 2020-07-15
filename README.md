@@ -1,5 +1,5 @@
 ## Group Hours
-This is a Solo project where a user should be able to create a Group-hours page which allows users to create accounts, groups, hours, along with session creation and destruction. At the end of the project, the user should view all groups, hours by groups and hours by user, all in All these activities start on the index page.
+This is a Solo project where a user should be able to create Group-hours(a combination of Groups where users belong and hours they spend doing different things in their lives) page which allows users to create accounts, groups, hours, along with session creation and destruction. At the end of the project, the user should view all groups, hours by groups and hours by user, all in All these activities start on the index page.
 
 ### Requirements
 Download the application and ensure that you have Ruby installed.
@@ -7,7 +7,7 @@ Install rails 5.2.3 if you haven't yet done it.
 To Intsall rails add the gem install rails -v '5.2.3' command.
 
 ### Features
-Some of the features of this project include:
+Some of the features of this project include but not limited to:
   - User Signup. 
   - User Login.
   - List of Groups.
@@ -18,7 +18,10 @@ Some of the features of this project include:
   - They get to signin.
   - Every action is dependent on a logged user apart from the index page.
   
- ### Installing
+ ### Installing.
+ - The installation is just you having the requirements listed and a browser
+ - Then put the url in the url bar
+ - That will be it
 
 ### Using the System
   - Run rails s to start the server.
@@ -27,7 +30,7 @@ Some of the features of this project include:
   - The rest, follow the UI for what you want to do.
   
 ## TESTING
-  - Tests written for: 
+  - Tests have been written for: 
       - Groups.
       - Hours.
       - Users.
