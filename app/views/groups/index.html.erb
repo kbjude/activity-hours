@@ -18,6 +18,9 @@
         </div>
         <div class="description">
         </div>
+        <% if group.icon.attached? %>
+            <%= image_tag(group.icon.variant(resize: '200 x 200'))%>
+        <% end %>
         <div class="descriptionh">
             <%= group.created_at %> &nbsp
         </div>
