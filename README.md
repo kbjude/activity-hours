@@ -45,7 +45,7 @@ Some of the features of this project include but not limited to:
   The tests are written using Rspec and because of that:
     - The tests can be run using the rspec command.
 
-###Technologies Used
+### Technologies Used
 - Ruby
 - Ruby on rails
 
