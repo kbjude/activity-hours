@@ -10,7 +10,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = current_user.groups.build(group_params)
-    @group.save
+    Rails.logger.info group_params
     if @group.save
       flash.now[:succes] = 'Group successful created'
       redirect_to @group

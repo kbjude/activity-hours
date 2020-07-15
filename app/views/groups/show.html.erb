@@ -16,9 +16,10 @@
     <p>
     Authoured by:    <%= @user.name %>
     </p>
+    <%= @group.uploads.count %>
     <% @group.uploads.each do |upload| %>
         <% if upload.variable? %>
-            <%= image_tag(resize.uploads.variant('400 x 400'))%>
+            <%= image_tag(upload.variant(resize: '400 x 400'))%>
         <% elsif upload.previewable? %>
             <%= link_to image_tag(resize.uploads.preview('400 x 400'), upload)%>
         <% elsif upload.image? %>

@@ -9,7 +9,6 @@ class GrouphoursController < ApplicationController
 
   def create
     @grouphour = current_user.grouphour.build(grouphour_params)
-    @grouphour.save
     if @grouphour.save
       flash.now[:succes] = 'Hour successful created'
       redirect_to @grouphour
