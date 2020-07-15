@@ -24,10 +24,16 @@ Some of the features of this project include but not limited to:
  - That will be it
 
 ### Using the System
+
+#### On your local Machine
   - Run rails s to start the server.
   - Type localhost:3000 in the URL.
   - Create an account and signin with that account.
   - The rest, follow the UI for what you want to do.
+  
+ #### Remote
+ - The product is deployed on heroku so it use it follow the link below
+ 
   
 ## TESTING
   - Tests have been written for: 
