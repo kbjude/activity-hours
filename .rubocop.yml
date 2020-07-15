@@ -8,7 +8,6 @@ AllCops:
     - 'spec/**/*'
     - 'bin/**/*'
     - 'config/**/*'
-
   DisplayCopNames: true
 
 Layout/LineLength:
