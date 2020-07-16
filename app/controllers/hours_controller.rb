@@ -26,7 +26,7 @@ class HoursController < ApplicationController
     @users = User.all
     @user = User.find_by_id(params[:id])
     @groups = Group.all
-    @count = Hour.totalhours(@user)
+    @count = Hour.totalhours(current_user)
   end
 
   def externalhours

@@ -9,6 +9,6 @@ end
 
 public
 
-def totalhours(_user)
-  Hour.sum(:hours)
+def totalhours(user)
+  user.hours.sum(:hours)
 end
