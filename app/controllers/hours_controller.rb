@@ -14,14 +14,14 @@ class HoursController < ApplicationController
     @hour.save
     if @hour.save
       flash.now[:succes] = 'Hour successful created'
-      redirect_to @hour
+      redirect_to hour_path(@hour)
     else
       render :new
     end
   end
 
   def show
-    @hours = Hour.all.order(created_at: :desc)
+    @hours = current_user.hours.all.order(created_at: :desc)
     @hour = Hour.find_by_id(params[:id])
     @users = User.all
     @user = User.find_by_id(params[:id])

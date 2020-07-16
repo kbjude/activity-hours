@@ -53,10 +53,30 @@ body {
     font-size: 45px;
 }
 
+.buttonhour {
+    background-color: #5FB625;
+    height: 80px;
+    padding: 20px;
+}
+
+.layouthour {
+    width: 30%;
+    height: 10%;
+    border: solid;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
 .hourf {
     font-size: 20px;
 }
 
 .externalhrs {
     color: black;
+}
+
+#desc {
+    font-size: 40px;
 }
