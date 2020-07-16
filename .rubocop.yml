@@ -55,6 +55,10 @@ Style/BlockComments:
   Enable: false
 Style/GuardClause:
   Enabled: false
+Style/InlineComment:
+  Enabled: false
+Style/BlockComments:
+  Enable: false
 Style/DoubleNegation:
   Enabled: false
 

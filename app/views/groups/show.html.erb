@@ -1,0 +1,29 @@
+<div class="group-title">
+    <h1> <%= @group.name %> </h1>
+</div
+<div class ="profile-items">
+    <% if @group.icon.attached? %>
+        <%= image_tag(@group.icon.variant(resize: '200 x 200'))%>
+    <% end %>
+
+    <% @grouphours.each do |hour|%>
+        <%= hour.hours %>
+    <% end %>
+    <p>
+    Created at:    <%= @group.created_at %>
+    </p>
+
+    <p>
+    Authoured by:    <%= @user.name %>
+    </p>
+    <%= @group.uploads.count %>
+    <% @group.uploads.each do |upload| %>
+        <% if upload.variable? %>
+            <%= image_tag(upload.variant(resize: '400 x 400'))%>
+        <% elsif upload.previewable? %>
+            <%= link_to image_tag(resize.uploads.preview('400 x 400'), upload)%>
+        <% elsif upload.image? %>
+            <%= link_to image_tag(resize.uploads.preview('400 x 400'), upload)%>
+        <% end %>
+    <% end %>
+<div>

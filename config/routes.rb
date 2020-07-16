@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users
-  resources :groups
-  resources :hours do
+  resources :users, only: %i[new create show index]
+  resources :groups, only: %i[new create show index]
+  resources :hours, only: %i[new create show index] do
     collection do
       get 'externalhours'
     end

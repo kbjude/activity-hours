@@ -1,0 +1,2 @@
+module GrouphoursHelper
+end

@@ -1,0 +1,12 @@
+<div class="hourf">
+    <%= form_for @hour do |form|%><br><br>
+        <%= form.hidden_field :user, :value => current_user.name %>
+        <%= form.label :hours %> <br>
+        <%= form.text_field :hours %><br><br>
+        <%= form.label :description %><br>
+        <%= form.text_area :description %><br><br>
+        <%= form.label  :uploads %> <br>
+        <%= form.file_field :uploads, multiple: true %> <br><br>
+        <%= form.submit %><br><br>
+    <% end %>
+</div>

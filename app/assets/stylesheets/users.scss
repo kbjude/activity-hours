@@ -1,0 +1,69 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    color: white;
+    a:link, a:visited, a:active {
+    color: white;
+    text-decoration: none;
+    margin: 0 40px;
+    }
+
+    a:hover {
+        color: rgb(214, 209, 209);
+    }
+
+    .circle {
+        border-color: ivory;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 45px;
+        padding: 30px;
+        width: 25px;
+        margin-top: 15px;
+    }
+
+    .awesome-icon {
+        font-size: 30px;
+    }
+
+    .motherdiv2 .motherdiv3 {
+        display: flex;
+    }
+
+    hr {
+        max-width: 80%;
+    }
+
+    h4 {
+        font-size: 40px;
+        margin-top: -80px;
+        margin-left: 120px;
+        font-weight: normal;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .list-content {
+
+        align-items: left;
+    }
+
+    .awesome-icon {
+        margin-left: 1px;
+    }
+
+    .header {
+        font-size: 24px;
+    }
+
+    .session {
+        font-size: 30px;
+        text-align: center;
+    }
+}

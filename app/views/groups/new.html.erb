@@ -1,0 +1,10 @@
+<%= form_for @group do |form|%> <br> <br>
+  <%= form.hidden_field :user, :value => current_user.name %>
+    <%= form.label :name %> <br>
+    <%= form.text_field :name %> <br> <br>
+    <%= form.label :icon %> <br>
+    <%= form.file_field :icon %> <br> <br>
+    <%= form.label :uploads %> <br>
+    <%= form.file_field :uploads, multiple: true %><br><br>
+    <%= form.submit %>
+<% end %>

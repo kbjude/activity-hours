@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome.css";
+body {
+    background-color: #3573bbe3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
