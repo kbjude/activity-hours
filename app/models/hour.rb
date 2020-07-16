@@ -1,3 +1,3 @@
 class Hour < ApplicationRecord
-  validates :hours, prescence: true, numericality: { only_integer: true }
+  validates :hours, presence: true, numericality: { only_integer: true }
 end
