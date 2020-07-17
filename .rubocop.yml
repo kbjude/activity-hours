@@ -10,7 +10,6 @@ AllCops:
     - 'config/**/*'
     
   DisplayCopNames: true
-
 Layout/LineLength:
   Max: 142
 Metrics/MethodLength:
@@ -49,16 +48,10 @@ Style/DocumentationMethod:
   Enabled: false
 Style/MissingElse:
   Enabled: false
-Style/InlineComment:
-  Enabled: false
-Style/BlockComments:
-  Enable: false
 Style/GuardClause:
   Enabled: false
 Style/InlineComment:
   Enabled: false
-Style/BlockComments:
-  Enable: false
 Style/DoubleNegation:
   Enabled: false
 
