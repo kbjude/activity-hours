@@ -1,5 +1,5 @@
 ## Group Hours
-This is a Solo project where a user should be able to create Group-hours(a combination of Groups where users belong and hours they spend doing different things in their lives) page which allows users to create accounts, groups, hours, along with session creation and destruction. At the end of the project, the user should view all groups, hours by groups and hours by user, all in All these activities start on the index page.
+This is a Solo project where a user should be able to create Group-hours(a combination of Groups where users belong and hours they spend doing different things in their lives) page which allows users to create accounts, groups, hours, along with session creation and destruction. At the end of the project, the user should view all groups, hours by groups and hours by user, all in All these activities start on the index page. Please take note that the screen should be in the small screen mode (Mobile phone)
 
 ### Requirements
 Download the application and ensure that you have Ruby installed.
