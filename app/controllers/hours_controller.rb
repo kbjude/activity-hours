@@ -30,16 +30,16 @@ class HoursController < ApplicationController
   end
 
   def externalhours
-    @hours = []
+    @externalhours = []
     current_user.hours.each do |hour|
-      @hours.push hour if hour.groups.count.zero?
+      @externalhours.push hour if hour.groups.count.zero?
     end
-    @sorted = @hours.sort_by(&:created_at)
+    @sorted = @externalhours.sort_by(&:created_at)
   end
 
   private
 
   def hour_params
-    params.require(:hour).permit(:hours, :description, :user_id, uploads: [])
+    params.require(:hour).permit(:hours, :description, :user_id, :group_id, uploads: [])
   end
 end
