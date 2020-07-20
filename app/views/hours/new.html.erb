@@ -8,7 +8,7 @@
         <%= form.label  :uploads %> <br>
         <%= form.file_field :uploads, multiple: true %> <br><br>
         <div class="dropdown">
-            Select a group <%= form.collection_select :groups, Group.all, :id, :name, include_blank: true %> <br><br>
+            Select a group <%= form.collection_select :group_ids, Group.all, :id, :name, { prompt: "select a group" }, { multiple: true } %> <br><br>
         </div>
         <%= form.submit %><br><br>
     <% end %>

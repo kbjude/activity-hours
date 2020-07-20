@@ -11,7 +11,6 @@ class HoursController < ApplicationController
 
   def create
     @hour = current_user.hours.build(hour_params)
-    Here i come
     @hour.save
     if @hour.save
       flash.now[:succes] = 'Hour successful created'
@@ -41,6 +40,6 @@ class HoursController < ApplicationController
   private
 
   def hour_params
-    params.require(:hour).permit(:hours, :description, :user_id, :group_id, :groups, uploads: [])
+    params.require(:hour).permit(:hours, :description, :user_id, :group_id, group_ids: [], uploads: [])
   end
 end
