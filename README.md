@@ -26,6 +26,22 @@ Some of the features of this project include but not limited to:
 ### Using the System
 
 #### On your local Machine
+##### Setting you local machine up
+  - Install ruby using:
+    - $ brew install ruby {For a Mac users}
+    - $ sudo apt-get install ruby-full {Linux user}
+    - Follow this [link](https://www.ruby-lang.org/en/documentation/installation/) for more help
+  - Install Rails using the following commands.
+    - gem install rails
+    - rails -v {to Check the version of rails}
+    - sudo yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel 
+    - libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl    sqlite-devel  { Install Prerequisite Dependencies }
+    - sudo yum install postgresql-server postgresql-contrib {Install the data base}
+  - Switch the Postgres terminal and setup your database. Follow the link below
+    - [Link](https://www.guru99.com/postgresql-create-database.html)
+    - run a rake:dbmigrate
+    - You project will be fully setup
+##### Running the application locally
   - Run rails s to start the server.
   - Type localhost:3000 in the URL.
   - Create an account and signin with that account.
