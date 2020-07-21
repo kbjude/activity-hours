@@ -2,7 +2,7 @@ class HoursController < ApplicationController
   before_action :login_required, only: %i[new create]
 
   def index
-    @hours = Hour.all.order(created_at: :desc)
+    @hours = current_user.hours.all.order(created_at: :desc)
   end
 
   def new
