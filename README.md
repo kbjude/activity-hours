@@ -37,10 +37,12 @@ Some of the features of this project include but not limited to:
     - sudo yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel 
     - libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl    sqlite-devel  { Install Prerequisite Dependencies }
     - sudo yum install postgresql-server postgresql-contrib {Install the data base}
-  - Switch the Postgres terminal and setup your database. Follow the link below
+  - Switch to the Postgres terminal and setup your database. Follow the link below
     - [Link](https://www.guru99.com/postgresql-create-database.html)
+    - The link will enable you create a user name and password for your database
+    - Create the database 
     - run a rake:dbmigrate
-    - You project will be fully setup
+    - Your project will be fully setup
 ##### Running the application locally
   - Run rails s to start the server.
   - Type localhost:3000 in the URL.
