@@ -5,7 +5,7 @@ module ApplicationHelper
       concat link_to 'Back to Profile', root_path
       link_to 'Add a new hour(s)', new_hour_path
     else
-      link_to 'Login', signin_path
+      concat link_to 'Login', signin_path
       link_to 'Sign Up', new_user_path
     end
   end
