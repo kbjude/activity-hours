@@ -9,5 +9,10 @@ RSpec.describe Hour, type: :model do
             expect(hour.save).to eql(true)
         end
 
+        it 'returns a failed creation' do
+            hour.user_id = ' '
+            expect(hour.save).to eql(false)
+        end
+
     end
 end
