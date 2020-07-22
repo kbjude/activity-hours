@@ -7,6 +7,9 @@
         <%= form.text_area :description %><br><br>
         <%= form.label  :uploads %> <br>
         <%= form.file_field :uploads, multiple: true %> <br><br>
+        <div class="dropdown">
+            Select a group <%= form.collection_select :group_ids, Group.all, :id, :name, { prompt: "select a group" }, { multiple: true } %> <br><br>
+        </div>
         <%= form.submit %><br><br>
     <% end %>
 </div>

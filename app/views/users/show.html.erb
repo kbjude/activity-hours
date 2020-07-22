@@ -1,5 +1,5 @@
 <div class="profile-title">
-    <h1> <%= current_user.name %></h1> <br> <br>
+    <h1> <%= "#{current_user.name.capitalize }\'s Profile" %></h1> <br> <br>
 </div>
 <div class="profile-body">
     <div class="motherdiv1">
@@ -8,7 +8,7 @@
         </div>
         <div class="list-names">
             <div class="subtitle">
-                <h4> All my hours</h4> <br>
+                <h4> <%= link_to 'All my hours', hours_path %></h4> <br>
                 <hr>
             </div>
             <div class="content">

@@ -2,7 +2,7 @@ class HoursController < ApplicationController
   before_action :login_required, only: %i[new create]
 
   def index
-    @hours = Hour.all.order(created_at: :desc)
+    @hours = current_user.hours.includes(:groups).all.order(created_at: :desc)
   end
 
   def new
@@ -21,25 +21,25 @@ class HoursController < ApplicationController
   end
 
   def show
-    @hours = current_user.hours.all.order(created_at: :desc)
+    @hours = current_user.hours.includes(:groups).all.order(created_at: :desc)
     @hour = Hour.find_by_id(params[:id])
-    @users = User.all
-    @user = User.find_by_id(params[:id])
-    @groups = Group.all
-    @count = Hour.totalhours(current_user)
+    @users = User.includes(:hours).all
+    @user = User.includes(:hours).find_by_id(params[:id])
+    @groups = Group.includes(:hours, :users).all
+    @count = Hour.includes(:users).totalhours(current_user)
   end
 
   def externalhours
-    @hours = []
+    @externalhours = []
     current_user.hours.each do |hour|
-      @hours.push hour if hour.groups.count.zero?
+      @externalhours.push hour if hour.groups.count.zero?
     end
-    @sorted = @hours.sort_by(&:created_at)
+    @sorted = @externalhours.sort_by(&:created_at)
   end
 
   private
 
   def hour_params
-    params.require(:hour).permit(:hours, :description, :user_id, uploads: [])
+    params.require(:hour).permit(:hours, :description, :user_id, :group_id, group_ids: [], uploads: [])
   end
 end

@@ -7,3 +7,8 @@ class Group < ApplicationRecord
   has_one_attached :icon
   has_many_attached :uploads
 end
+
+public
+def grouptotalhours(group)
+  group.hours.sum(:hours)
+end

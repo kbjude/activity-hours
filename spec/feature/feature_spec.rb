@@ -7,4 +7,4 @@ RSpec.describe User, type: :feature do
         expect(page).to have_content('Login')
       end
     end
-  end
+end

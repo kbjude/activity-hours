@@ -1,11 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe 'Hour', type: :model do
+RSpec.describe 'Group', type: :model do
     describe 'Creating a group' do
+        let(:group) { build(:group)}
+        let(:user) { create(:user)}
         it 'returns a newly created group' do
-            user = User.create(name: 'Jude')
-            group = Group.create(name: "Warriors", user_id: 1)
-            expect(group).to eql(group)
+            group.user_id = user.id
+            expect(group.save).to eql(true)
         end
         it 'returns all the registered groups' do
             hour = Group.all
