@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
   def index
-    @groups = Group.all
-    @group = Group.find_by_id(params[:id])
+    @groups = Group.includes(:hours).all
+    @group = Group.includes(:hours).find_by_id(params[:id])
   end
 
   def new
@@ -24,7 +24,7 @@ class GroupsController < ApplicationController
     @group = Group.includes(:hours).find_by_id(params[:id])
     @hours = Hour.includes(:groups).all
     @grouphours = @group.hours
-    @user = User.find_by_id(params[:id])
+    @user = User.includes(:groups).find_by_id(params[:id])
     @grouphourscount = @group.hours.grouptotalhours(@group)
 
   end
