@@ -2,7 +2,7 @@ class HoursController < ApplicationController
   before_action :login_required, only: %i[new create]
 
   def index
-    @hours = current_user.hours.all.order(created_at: :desc)
+    @hours = current_user.hours.includes(:groups).all.order(created_at: :desc)
   end
 
   def new
@@ -21,9 +21,9 @@ class HoursController < ApplicationController
   end
 
   def show
-    @hours = current_user.hours.all.order(created_at: :desc)
+    @hours = current_user.hours.includes(:groups).all.order(created_at: :desc)
     @hour = Hour.find_by_id(params[:id])
-    @users = User.all
+    @users = User.includes(:hours).all
     @user = User.find_by_id(params[:id])
     @groups = Group.all
     @count = Hour.totalhours(current_user)
