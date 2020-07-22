@@ -16,4 +16,10 @@ module GroupsHelper
       end
     end
   end
+
+  def attachment
+    if @group.icon.attached?
+      image_tag(@group.icon.variant(resize: '200 x 200'))
+    end
+  end
 end

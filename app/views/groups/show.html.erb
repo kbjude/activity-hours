@@ -2,9 +2,7 @@
     <h1> <%= @group.name %> </h1>
 </div
 <div class ="profile-items">
-    <% if @group.icon.attached? %>
-        <%= image_tag(@group.icon.variant(resize: '200 x 200'))%>
-    <% end %>
+            <%= attachment %>
 
     <% @grouphours.each do |hour|%>
         <%= hour.hours %>
