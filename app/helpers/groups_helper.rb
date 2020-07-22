@@ -18,8 +18,6 @@ module GroupsHelper
   end
 
   def attachment
-    if @group.icon.attached?
-      image_tag(@group.icon.variant(resize: '200 x 200'))
-    end
+    image_tag(@group.icon.variant(resize: '200 x 200')) if @group.icon.attached?
   end
 end

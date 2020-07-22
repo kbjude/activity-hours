@@ -22,8 +22,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id([:user_id])
-    @user_hours = current_user.hours.includes(:users).all
-    @user_groups = current_user.groups.includes(:users).all
+    @user_hours = current_user.hours.all
+    @user_groups = current_user.groups.all
   end
 
   private
