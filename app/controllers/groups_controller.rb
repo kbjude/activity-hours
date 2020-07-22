@@ -25,6 +25,8 @@ class GroupsController < ApplicationController
     @grouphours = @group.hours
     @user = User.find_by_id(params[:id])
     @groups = Group.all.order(:name)
+    @grouphourscount = @group.hours.totalhours(current_user)
+
   end
 
   private
