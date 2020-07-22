@@ -24,7 +24,7 @@ class HoursController < ApplicationController
     @hours = current_user.hours.includes(:groups).all.order(created_at: :desc)
     @hour = Hour.find_by_id(params[:id])
     @users = User.includes(:hours).all
-    @user = User.find_by_id(params[:id])
+    @user = User.includes(:hours).find_by_id(params[:id])
     @groups = Group.includes(:hours, :users).all
     @count = Hour.includes(:users).totalhours(current_user)
   end

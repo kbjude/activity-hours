@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   skip_before_action :login_required, only: %i[new create]
   def index
-    @users = User.all
+    @users = User.includes(:hours).all
   end
 
   def new
@@ -22,8 +22,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id([:user_id])
-    @user_hours = current_user.hours.all
-    @user_groups = current_user.groups.all
+    @user_hours = current_user.hours.includes(:users).all
+    @user_groups = current_user.groups.includes(:users).all
   end
 
   private
