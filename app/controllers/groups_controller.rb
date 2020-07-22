@@ -20,11 +20,11 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @group = Group.find_by_id(params[:id])
-    @hours = Hour.all
+    @groups = Group.includes(:hours).all.order(:name)
+    @group = Group.includes(:hours).find_by_id(params[:id])
+    @hours = Hour.includes(:groups).all
     @grouphours = @group.hours
     @user = User.find_by_id(params[:id])
-    @groups = Group.all.order(:name)
     @grouphourscount = @group.hours.grouptotalhours(@group)
 
   end
