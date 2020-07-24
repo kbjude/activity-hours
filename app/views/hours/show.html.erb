@@ -1,0 +1,41 @@
+<br>
+<div class="header-hours">
+    <div class="image"> <i class="fa fa-bars" aria-hidden="true"></i></div>
+    <div class="image"> THE HOURS </div>
+    <div class="image"> <i class="fa fa-search" aria-hidden="true"></i></div>
+</div> <br> <br>
+<div class="header-hou">
+    <div class="image"></div>
+    <div class="image"> Most Recent </div>
+    <div class="image"> Most Acient</i></div>
+</div>
+<div class="contenth">
+    <div class="count"> 
+        <div class="totalhours">
+        Total hours
+        </div>
+        <div class="number"> <%= @count %> hrs </div>
+    </div>
+    <div class="singleitemblock">
+        <% @hours.each do |hour| %>
+        <div class="single-item">
+            <div class="descriptionh">
+                <%= hour.description %>
+            </div>
+            <div class="descriptionh">
+                <%= hour.hours %> hrs
+            </div>
+        </div>
+        <div class="time">
+                    <p><%= hour.created_at %> </p>
+        </div><br>
+                <% end %>
+    </div>
+
+    <br><br>
+    <div class="button">
+        <div class="layout">
+            <%= link_to 'Add new', new_hour_path %>
+        </div>
+    </div>
+</div>

@@ -64,9 +64,12 @@ Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 Lint/AssignmentInCondition:
   Enabled: false
+Lint/NonDeterministicRequireOrder:
+  Enabled: false
 Layout/TrailingEmptyLines:
   Enabled: false
 Style/ExpandPathArguments:
   Enabled: false
 Lint/NumberConversion:
   Enabled: false
+
